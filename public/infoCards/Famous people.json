@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Angkor Wat",
+    "description": "Cambodia",
+    "url": "/images/Angkor.png",
+    "id": 1,
+    "open": false
+  },
+  {
+    "name": "Angkor Wat",
+    "description": "Cambodia",
+    "url": "/images/Angkor.png",
+    "id": 2,
+    "open": false
+  },
+  {
+    "name": "Angkor Wat",
+    "description": "Cambodia",
+    "url": "/images/Angkor.png",
+    "id": 3,
+    "open": false
+  },
+  {
+    "name": "Angkor Wat",
+    "description": "Cambodia",
+    "url": "/images/Angkor.png",
+    "id": 4,
+    "open": false
+  },
+  {
+    "name": "Angkor Wat",
+    "description": "Cambodia",
+    "url": "/images/Angkor.png",
+    "id": 5,
+    "open": false
+  },
+  {
+    "name": "Angkor Wat",
+    "description": "Cambodia",
+    "url": "/images/Angkor.png",
+    "id": 6,
+    "open": false
+  }
+]

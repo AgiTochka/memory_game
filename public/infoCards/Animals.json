@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Lion",
+    "description": "Panthera leo",
+    "url": "/images/animals/lion.jpg",
+    "id": 1,
+    "open": false
+  },
+  {
+    "name": "Cat",
+    "description": "Felis catus",
+    "url": "/images/animals/cats.jpg",
+    "id": 2,
+    "open": false
+  },
+  {
+    "name": "Shark",
+    "description": "Selachimorpha",
+    "url": "/images/animals/shark.jpg",
+    "id": 3,
+    "open": false
+  },
+  {
+    "name": "Clownfish",
+    "description": "Amphiprioninae",
+    "url": "/images/animals/clownfish.jpg",
+    "id": 4,
+    "open": false
+  },
+  {
+    "name": "Magpie",
+    "description": "Pica pica",
+    "url": "/images/animals/magpie.jpg",
+    "id": 5,
+    "open": false
+  },
+  {
+    "name": "Woodpecker",
+    "description": "Picidae",
+    "url": "/images/animals/woodpecker.jpg",
+    "id": 6,
+    "open": false
+  }
+]

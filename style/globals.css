@@ -1,0 +1,81 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "SFRounded";
+    src: url("/fonts/subset-SFRounded-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SFRounded";
+    src: url("/fonts/subset-SFRounded-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SFRounded";
+    src: url("/fonts/subset-SFRounded-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "SFProRounded";
+    src: url("/fonts/SFProRounded.ttf") format("ttf");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #F1F1F1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 17px;
+    font-weight: 500;
+    color: #1F2932;
+}
+
+/* [640, 1024, 1200, 1440] */
+@media screen and (max-width: 640px) {
+    html,
+    body {
+        font-size: 15px;
+    }
+}
+
+#__next {
+    max-width: 1440px;
+    margin: auto;
+}
+
+html, body, #__next {
+    height: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}

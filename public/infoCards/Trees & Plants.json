@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Asters",
+    "description": "Symphyotrichum",
+    "url": "/images/plants/astra.jpg",
+    "id": 1,
+    "open": false
+  },
+  {
+    "name": "Rose",
+    "description": "Rosa",
+    "url": "/images/plants/rose.jpg",
+    "id": 2,
+    "open": false
+  },
+  {
+    "name": "Maple",
+    "description": "Acer",
+    "url": "/images/plants/maple.jpg",
+    "id": 3,
+    "open": false
+  },
+  {
+    "name": "Cherry plum",
+    "description": "Prunus cerasifera",
+    "url": "/images/plants/cherry.jpg",
+    "id": 4,
+    "open": false
+  },
+  {
+    "name": "Tulip",
+    "description": "Tulipa",
+    "url": "/images/plants/tulip.jpg",
+    "id": 5,
+    "open": false
+  },
+  {
+    "name": "Cedar",
+    "description": "Cedrus",
+    "url": "/images/plants/cedar.jpg",
+    "id": 6,
+    "open": false
+  }
+]

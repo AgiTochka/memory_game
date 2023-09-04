@@ -1,0 +1,338 @@
+.largeText {
+    font-family: 'SFRounded', sans-serif;
+    color: #055E71;
+    letter-spacing: -3px;
+}
+
+.player {
+    background: rgba(0, 94, 114, 0.1);
+    border-radius: 9px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-align: right;
+}
+
+.quit {
+    background: #005E72;
+    border: 1px solid #437681;
+    border-radius: 9px;
+    padding: 12px 6px;
+    width: 90px;
+    height: 45px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2.72727px;
+    text-transform: uppercase;
+    margin: 0px 20px;
+}
+
+.card {
+    transform: translate(-50%, -50%);
+    cursor: url("/images/cursor.cur"), url("/images/cursor1.cur"), pointer;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    margin: 12px 6px;
+}
+
+
+
+.card  > div {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: 0.7s;
+    border-radius: 17px;
+}
+.openTrue{
+    opacity: 0.2;
+}
+
+.cardContent {
+    font-family: 'SFProRounded', sans-serif;
+    text-align: center;
+    color: #005E72;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+    height: fit-content;
+}
+.cardContent > span{
+    letter-spacing: -1px;
+}
+
+
+
+@media  (max-width: 640px) {
+    .card, .card > div {
+        width: 87px;
+        height: 132px;
+        margin: auto;
+        border-radius: 13px;
+    }
+    .quit{
+        width: 37px;
+        height: 35px;
+        margin: 0px 5px;
+        text-align: center;
+        line-height: 35px;
+        padding: 0;
+        align-self: start;
+
+    }
+    .cardContent{
+        font-size: 10px;
+        line-height: 14px;
+        border-radius: 8px;
+    }
+    .cardContent span{
+        font-size: 8px;
+    }
+    .cardBg{
+        border: 3px solid white;
+        border-radius: 13px;
+    }
+    .largeText{
+        letter-spacing: -1px;
+        padding-left: 0 !important;
+    }
+    .player{
+        width: 47%;
+        letter-spacing: 0px;
+        margin: 10px 5px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 640px) {
+    .card, .card > div {
+        width: 135px;
+        height: 195px;
+        margin: auto;
+        border-radius: 17px;
+    }
+    .cardContent{
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 13px;
+        width: 88%;
+    }
+    .cardContent  span{
+        font-size: 13px;
+    }
+    .cardBg{
+        border: 5px solid white;
+        border-radius: 17px;
+    }
+    .player{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .quit{
+        align-self: start;
+    }
+}
+@media screen and (min-width: 1025px){
+    .card, .card > div {
+        width: 167px;
+        height: 244px;
+        margin: auto;
+        border-radius: 17px;
+    }
+    .cardContent{
+        font-size: 19px;
+        line-height: 20px;
+        border-radius: 13px;
+        width: 88%;
+    }
+    .cardContent  span{
+        font-size: 16px;
+    }
+    .cardBg{
+        border: 5px solid white;
+        border-radius: 17px;
+    }
+    .player{
+        margin: 10px 20px;
+    }
+}
+
+.introHeader{
+    width: 50%;
+    font-family: 'SFProRounded', sans-serif;
+    font-size: 74px;
+    line-height: 75px;
+    letter-spacing: -3px;
+    color: #055E71;
+    margin-bottom: 60px;
+    margin-top: 35px;
+}
+.categories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 65%;
+    margin-bottom: 100px;
+}
+.categories > h3{
+    font-family: 'SFProRounded', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    width: 100%;
+
+}
+
+.blocks{
+    padding: 13px 18px;
+    max-width: max-content;
+    height: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.0574738);
+    border-radius: 16px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-family: 'SFProRounded', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+.grey{
+    opacity: 0.3;
+}
+.activeTheme{
+    text-decoration: underline;
+    background: #D3E4D4;
+}
+
+.difficult{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 65%;
+    margin-bottom: 10px;
+}
+
+.difficult h3{
+    font-family: 'SFProRounded', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.blocks:hover{
+    cursor: pointer;
+}
+
+.grey:hover{
+    cursor: default;
+}
+
+
+@media  (max-width: 640px) {
+    .introHeader{
+        width: 100%;
+        font-size: 25px;
+        letter-spacing: 0px;
+        line-height: 26px;
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+    .categories > h3{
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .categories{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .blocks{
+        font-size: 12px;
+        margin-right: 10px;
+        padding: 3px 13px;
+        border-radius: 14px;
+        margin-bottom: 10px;
+        line-height: 13px;
+        min-width: 55px;
+        text-align: center;
+    }
+    .active{
+        border: 1px solid #005E72;
+    }
+    .gameOver{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 75px;
+        background: white;
+        font-size: 35px;
+        padding: 15px;
+        text-align: center;
+        font-family: 'SFRounded', sans-serif;
+        color: #055E71;
+        letter-spacing: -3px;
+        border: 1px solid #005E72;
+    }
+    .difficult{
+        width: 100%;
+    }
+    .difficult > h3{
+        font-size: 14px;
+        line-height: 15px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 640px) {
+    .introHeader{
+        width: 100%;
+        font-size: 45px;
+        letter-spacing: -1px;
+        line-height: 46px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    .categories > h3{
+        font-size: 22px;
+        line-height: 23px;
+    }
+    .categories{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .blocks{
+        font-size: 18px;
+        margin-right: 15px;
+        padding: 0 15px;
+        border-radius: 14px;
+    }
+    .difficult{
+        width: 100%;
+    }
+    .difficult > h3{
+        font-size: 22px;
+        line-height: 23px;
+        color: black;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-height: 900px ){
+    .introHeader{
+        width: 100%;
+        font-size: 45px;
+        letter-spacing: -1px;
+        line-height: 46px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+}

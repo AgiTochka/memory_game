@@ -9,8 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "airtable": "^0.12.2",
+    "easy-peasy": "^6.0.2",
+    "facepaint": "^1.2.1",
+    "gh-pages": "^6.0.0",
     "next": "13.4.19",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-use": "^17.4.0",
+    "underscore": "^1.13.6"
   }
 }

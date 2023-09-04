@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Acropolis",
+    "description": "Athens",
+    "url": "/images/arch/arch-acropolis.jpg",
+    "id": 1,
+    "open": false
+  },
+  {
+    "name": "Angkor Wat",
+    "description": "Cambodia",
+    "url": "/images/arch/arch-angkor.jpg",
+    "id": 2,
+    "open": false
+  },
+  {
+    "name": "Burj Khalifa",
+    "description": "Dubai",
+    "url": "/images/arch/arch-burj.jpg",
+    "id": 3,
+    "open": false
+  },
+  {
+    "name": "Colloseum",
+    "description": "Rome",
+    "url": "/images/arch/arch-colloseum.jpg",
+    "id": 4,
+    "open": false
+  },
+  {
+    "name": "Eiffel Tower",
+    "description": "Paris",
+    "url": "/images/arch/arch-eiffel.jpg",
+    "id": 5,
+    "open": false
+  },
+  {
+    "name": "Brandenburg",
+    "description": "Gate, Berlin",
+    "url": "/images/arch/arch-gate.jpg",
+    "id": 6,
+    "open": false
+  }
+]

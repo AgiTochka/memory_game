@@ -4,6 +4,7 @@ import {useStoreActions, useStoreState} from "easy-peasy";
 import mq from "@/style/breakpoints";
 import styles from "../style/Common.module.css";
 import {useMedia} from "react-use";
+import {prefix} from "@/style/prefix";
 
 const Card = (props) => {
     const [rotation, setRotation] = useState(random(-2, 2));
@@ -38,7 +39,7 @@ const Card = (props) => {
                  }}>
                 <div
                     style={{
-                        backgroundImage: `url("${"/images/moroccan-flower.png"}")`,
+                        backgroundImage: `url("${prefix+"/images/moroccan-flower.png"}")`,
                         boxShadow: "0px 2px 11px rgba(0, 0, 0, 0.06), 0px 1px 4px rgba(0, 0, 0, 0.25)",
                         backgroundSize: "cover",
                         margin: "auto",
@@ -48,7 +49,7 @@ const Card = (props) => {
                 </div>
                 <div style={{
                     bacground: "#fff",
-                    backgroundImage: `url("${props.item.url}")`,
+                    backgroundImage: `url("${prefix+props.item.url}")`,
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",

@@ -81,7 +81,7 @@ const Intro = () => {
                     handleClickTheme(0);
                     handleThemeSelect(arrTheme[_.random(0, arrTheme.length - 1)]);
                 }}>
-                    <Image src={"/images/random.png"} alt={""} width={29} height={29}/>
+                    <Image src={`${prefix}/images/random.png`} alt={""} width={29} height={29}/>
                 </div>
                 <div className={styles.blocks + (selectedTheme == 1 ? ' ' + styles.activeTheme : '')} id={'btn-theme'} onClick={() => {
                     handleClickTheme(1);

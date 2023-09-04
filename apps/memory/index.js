@@ -100,7 +100,7 @@ const Main = () => {
                 minWidth: "100%",
                 minHeight: "100%",
                 backgroundColor: (step == "intro") ? "linear-gradient(180deg, #FFFFFF 0.04%, rgba(255, 255, 255, 0.821963) 38.73%, rgba(255, 255, 255, 0.480172) 54.94%, rgba(255, 255, 255, 0.0001) 79.12%)" : "#fff",
-                backgroundImage: (step == "intro") ? `url(${"/images/bgIntro2.png"})` : "",
+                backgroundImage: (step == "intro") ? `url(${prefix}${"/images/bgIntro2.png"})` : "",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 maskImage: (step == "intro") ? "linear-gradient(to bottom, transparent 50%, black)" : "",

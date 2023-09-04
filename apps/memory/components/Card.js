@@ -39,7 +39,7 @@ const Card = (props) => {
                  }}>
                 <div
                     style={{
-                        backgroundImage: `url("${prefix+"/images/moroccan-flower.png"}")`,
+                        backgroundImage: `url("${"/memory_game/images/moroccan-flower.png"}")`,
                         boxShadow: "0px 2px 11px rgba(0, 0, 0, 0.06), 0px 1px 4px rgba(0, 0, 0, 0.25)",
                         backgroundSize: "cover",
                         margin: "auto",
@@ -49,7 +49,7 @@ const Card = (props) => {
                 </div>
                 <div style={{
                     bacground: "#fff",
-                    backgroundImage: `url("${prefix+props.item.url}")`,
+                    backgroundImage: `url("${"/memory_game"+props.item.url}")`,
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",

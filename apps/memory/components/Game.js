@@ -26,7 +26,7 @@ const Game = () => {
             position: "relative",
             width: "100%",
             height:"100%",
-            cursor: `url("/images/cursor.cur"), url("/images/cursor1.cur"), pointer`,
+            cursor: `url("/memory_game/images/cursor.cur"), url("/memory_game/images/cursor1.cur"), pointer`,
         }} onClick={() => {
             setCounter(counter + 1)
         }}>

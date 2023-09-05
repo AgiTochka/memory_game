@@ -59,7 +59,7 @@ const Intro = () => {
     const isMobile = useMedia("(max-width: 480px)")
     const isIPad = useMedia("(max-width: 820px)")
 
-    const arrTheme = ['Animals', /*'History', 'Famous people',*/ 'Trees & Plants', 'Architecture'/*, 'Cities', 'Food & Beverages', 'Cars', 'Composers', 'Movies'*/];
+    const arrTheme = ['Animals', /*'History', */'Famous people', 'Trees & Plants', 'Architecture'/*, 'Cities', 'Food & Beverages', 'Cars', 'Composers', 'Movies'*/];
     return (
         <div style={{
             padding: isMobile ? 10 : 45,
@@ -98,8 +98,8 @@ const Intro = () => {
                     <p> 👑 History </p>
                 </div>
                 <div className={styles.blocks + (selectedTheme == 3 ? ' ' + styles.activeTheme : '')} id={'btn-theme'} onClick={() => {
-                   /* handleThemeSelect('Famous people');
-                    handleClickTheme(3);*/
+                    handleThemeSelect('Famous people');
+                    handleClickTheme(3);
 
                 }}>
                     <p> 🎩 Famous people</p>

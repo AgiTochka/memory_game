@@ -1,43 +1,43 @@
 [
   {
-    "name": "Angkor Wat",
-    "description": "Cambodia",
-    "url": "/images/Angkor.png",
+    "name": "Marilyn Monroe",
+    "description": "",
+    "url": "/images/famouspeople/merlinemonroe.jpg",
     "id": 1,
     "open": false
   },
   {
-    "name": "Angkor Wat",
-    "description": "Cambodia",
-    "url": "/images/Angkor.png",
+    "name": "Queen Elizabeth II",
+    "description": "",
+    "url": "/images/famouspeople/q2.jpg",
     "id": 2,
     "open": false
   },
   {
-    "name": "Angkor Wat",
-    "description": "Cambodia",
-    "url": "/images/Angkor.png",
+    "name": "Albert Einstein",
+    "description": "",
+    "url": "/images/famouspeople/albert.jpg",
     "id": 3,
     "open": false
   },
   {
-    "name": "Angkor Wat",
-    "description": "Cambodia",
-    "url": "/images/Angkor.png",
+    "name": "Michael Jackson",
+    "description": "",
+    "url": "/images/famouspeople/michail.jpg",
     "id": 4,
     "open": false
   },
   {
-    "name": "Angkor Wat",
-    "description": "Cambodia",
-    "url": "/images/Angkor.png",
+    "name": "Charles Chaplin",
+    "description": "",
+    "url": "/images/famouspeople/chaplin.jpg",
     "id": 5,
     "open": false
   },
   {
-    "name": "Angkor Wat",
-    "description": "Cambodia",
-    "url": "/images/Angkor.png",
+    "name": "J. K. Rowling",
+    "description": "",
+    "url": "/images/famouspeople/rowling.jpg",
     "id": 6,
     "open": false
   }

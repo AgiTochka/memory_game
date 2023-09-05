@@ -261,10 +261,10 @@
         padding: 5px 13px;
         border-radius: 14px;
         margin-bottom: 10px;
-        line-height: 13px;
+        line-height: 14px;
         min-width: 55px;
         text-align: center;
-        height: 30px;
+        height: 35px;
     }
     .active{
         border: 1px solid #005E72;

@@ -33,7 +33,7 @@ const Game = () => {
             {gameOver && <div style={{
                 position: "absolute",
                 top: "45%",
-                left: isMobile? "22%":"42%",
+                left: isMobile? "15%":"42%",
                 background: "white",
                 fontSize: "35px",
                 padding: "25px",

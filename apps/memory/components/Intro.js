@@ -76,7 +76,7 @@ const Intro = () => {
             <div className={styles.categories}>
                 <h3>Choose a topic to start the game</h3>
                 <div className={styles.blocks + (selectedTheme == 0 ? ' ' + styles.activeTheme : '')} style={{
-                    paddingTop: isMobile ? 9 : isIPad ? 10 : 10,
+                    paddingTop: isMobile ? 3 : isIPad ? 10 : 10,
                 }} onClick={() => {
                     handleClickTheme(0);
                     handleThemeSelect(arrTheme[_.random(0, arrTheme.length - 1)]);

@@ -2,18 +2,13 @@ import {
     createStore,
     StoreProvider,
     action,
-    persist,
     useStoreState,
-    thunk,
-    computed, useStoreActions,
 } from "easy-peasy"
-import Airtable from "airtable"
 import Game from "./components/Game"
 import Intro from "./components/Intro";
 import {useMedia} from "react-use";
 
 
-const base = new Airtable({apiKey: "keyClDzXOc8Bo0NJu"}).base("appb0ISwWTEP03KlI")
 const store = createStore({
     theme: null,
     difficulty: null,
@@ -89,7 +84,6 @@ const Wrapper = ({children}) => {
 }
 const Main = () => {
     const step = useStoreState(state => state.step);
-    const setStep = useStoreActions((actions) => actions.setStep);
 
     return (
         <main>
@@ -99,20 +93,16 @@ const Main = () => {
                 left: 0,
                 minWidth: "100%",
                 minHeight: "100%",
-                backgroundColor: (step == "intro") ? "linear-gradient(180deg, #FFFFFF 0.04%, rgba(255, 255, 255, 0.821963) 38.73%, rgba(255, 255, 255, 0.480172) 54.94%, rgba(255, 255, 255, 0.0001) 79.12%)" : "#fff",
-                backgroundImage: (step == "intro") ? `url(${"/memory_game/images/bgIntro2.png"})` : "",
+                backgroundColor: (step === "intro") ? "linear-gradient(180deg, #FFFFFF 0.04%, rgba(255, 255, 255, 0.821963) 38.73%, rgba(255, 255, 255, 0.480172) 54.94%, rgba(255, 255, 255, 0.0001) 79.12%)" : "#fff",
+                backgroundImage: (step === "intro") ? `url(${"/memory_game/images/bgIntro2.png"})` : "",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                maskImage: (step == "intro") ? "linear-gradient(to bottom, transparent 50%, black)" : "",
+                maskImage: (step === "intro") ? "linear-gradient(to bottom, transparent 50%, black)" : "",
 
             }}>
                 <Wrapper>
-                    {step == "intro" && <Intro/>}
-                    {/*step == "form" && <Form />*/}
-                    {/*step == "how-to" && <HowTo />*/}
-                    {step == "game" && <Game/>}
-                    {/*step == "outro" && <Outro />*/}
-
+                    {step === "intro" && <Intro/>}
+                    {step === "game" && <Game/>}
                 </Wrapper>
 
             </div>

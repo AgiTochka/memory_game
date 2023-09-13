@@ -3,7 +3,7 @@ import Image from "next/image";
 import {useMedia} from "react-use";
 import {useEffect, useState} from "react";
 import {useStoreActions, useStoreState} from "easy-peasy";
-import _, {random} from "underscore";
+import _ from "underscore";
 import getRelatedCards from "./getRelatedCards";
 
 const Intro = () => {
@@ -59,7 +59,7 @@ const Intro = () => {
     const isMobile = useMedia("(max-width: 480px)")
     const isIPad = useMedia("(max-width: 820px)")
 
-    const arrTheme = ['Animals', /*'History', */'Famous people', 'Trees & Plants', 'Architecture'/*, 'Cities', 'Food & Beverages', 'Cars', 'Composers', 'Movies'*/];
+    const arrTheme = ['Animals', 'History', 'Famous people', 'Trees & Plants', 'Architecture'/*, 'Cities', 'Food & Beverages', 'Cars', 'Composers', 'Movies'*/];
     return (
         <div style={{
             padding: isMobile ? 10 : 45,
@@ -75,7 +75,7 @@ const Intro = () => {
 
             <div className={styles.categories}>
                 <h3>Choose a topic to start the game</h3>
-                <div className={styles.blocks + (selectedTheme == 0 ? ' ' + styles.activeTheme : '')} style={{
+                <div className={styles.blocks + (selectedTheme === 0 ? ' ' + styles.activeTheme : '')} style={{
                     paddingTop: isMobile ? 3 : isIPad ? 10 : 10,
                 }} onClick={() => {
                     handleClickTheme(0);
@@ -83,67 +83,72 @@ const Intro = () => {
                 }}>
                     <Image src={`/memory_game/images/random.png`} alt={""} width={29} height={29}/>
                 </div>
-                <div className={styles.blocks + (selectedTheme == 1 ? ' ' + styles.activeTheme : '')} id={'btn-theme'} onClick={() => {
+                <div className={styles.blocks + (selectedTheme === 1 ? ' ' + styles.activeTheme : '')} id={'btn-theme'} onClick={() => {
                     handleClickTheme(1);
                     handleThemeSelect('Animals');
 
                 }}>
                     <p>🦕 Animals</p>
                 </div>
-                <div className={styles.blocks + (selectedTheme == 2 ? ' ' + styles.activeTheme : '')} id={'btn-theme'} onClick={() => {
-                    /*handleThemeSelect('History');
-                    handleClickTheme(2);*/
+                <div className={styles.blocks + (selectedTheme === 2 ? ' ' + styles.activeTheme : '')} id={'btn-theme'} onClick={() => {
+                    handleThemeSelect('History');
+                    handleClickTheme(2);
 
                 }}>
                     <p> 👑 History </p>
                 </div>
-                <div className={styles.blocks + (selectedTheme == 3 ? ' ' + styles.activeTheme : '')} id={'btn-theme'} onClick={() => {
+                <div className={styles.blocks + (selectedTheme === 3 ? ' ' + styles.activeTheme : '')} id={'btn-theme'} onClick={() => {
                     handleThemeSelect('Famous people');
                     handleClickTheme(3);
 
                 }}>
                     <p> 🎩 Famous people</p>
                 </div>
-                <div className={styles.blocks + (selectedTheme == 4 ? ' ' + styles.activeTheme : '')} id={'btn-theme'} onClick={() => {
+                <div className={styles.blocks + (selectedTheme === 4 ? ' ' + styles.activeTheme : '')} id={'btn-theme'} onClick={() => {
                     handleThemeSelect('Trees & Plants');
                     handleClickTheme(4);
 
                 }}>
                     <p> 🌿 Trees & Plants </p>
                 </div>
-                <div className={styles.blocks + (selectedTheme == 5 ? ' ' + styles.activeTheme : '')} id={'btn-theme'} onClick={() => {
+                <div className={styles.blocks + (selectedTheme === 5 ? ' ' + styles.activeTheme : '')} id={'btn-theme'} onClick={() => {
                     handleThemeSelect('Architecture');
                     handleClickTheme(5);
 
                 }}>
                     <p> 🏛 Architecture </p>
                 </div>
-                <div className={styles.blocks + ' ' + styles.grey} id={'btn-theme'} onClick={() => {
+                <div className={styles.blocks + ' ' + styles.grey} /*className={styles.blocks + (selectedTheme === 6 ? ' ' + styles.activeTheme : '')}*/ id={'btn-theme'} onClick={() => {
                    // handleThemeSelect('Cities');
+                    // handleClickTheme(6);
 
                 }}>
                     <p> 🌃 Cities </p>
                 </div>
-                <div className={styles.blocks + ' ' + styles.grey} id={'btn-theme'} onClick={() => {
+                <div className={styles.blocks + ' ' + styles.grey} /*className={styles.blocks + (selectedTheme === 7 ? ' ' + styles.activeTheme : '')}*/ id={'btn-theme'} onClick={() => {
                    // handleThemeSelect('Food & Beverages');
+                    // handleClickTheme(7);
 
                 }}>
                     <p> 🍣 Food & Beverages </p>
                 </div>
-                <div className={styles.blocks + ' ' + styles.grey} id={'btn-theme'} onClick={() => {
+                <div className={styles.blocks + ' ' + styles.grey} /*className={styles.blocks + (selectedTheme === 8 ? ' ' + styles.activeTheme : '')}*/ id={'btn-theme'} onClick={() => {
                    // handleThemeSelect('Cars');
+                    // handleClickTheme(8);
 
                 }}>
                     <p> 🚙 Cars </p>
                 </div>
-                <div className={styles.blocks + ' ' + styles.grey} id={'btn-theme'} onClick={() => {
+                <div className={styles.blocks + ' ' + styles.grey} /*className={styles.blocks + (selectedTheme === 9 ? ' ' + styles.activeTheme : '')}*/ id={'btn-theme'} onClick={() => {
                    // handleThemeSelect('Composers');
+                    // handleClickTheme(9);
 
                 }}>
                     <p>🎻 Composers </p>
                 </div>
-                <div className={styles.blocks + ' ' + styles.grey} id={'btn-theme'} onClick={() => {
+                <div className={styles.blocks + ' ' + styles.grey} /*className={styles.blocks + (selectedTheme === 10 ? ' ' + styles.activeTheme : '')}*/ id={'btn-theme'} onClick={() => {
                    // handleThemeSelect('Movies');
+                    // handleClickTheme(10);
 
                 }}>
                     <p> 🎥 Movies </p>
@@ -152,26 +157,26 @@ const Intro = () => {
 
             <div className={styles.difficult}>
                 <h3>Difficulty level</h3>
-                <div className={styles.blocks + (selectedDiff == 1 ? ' ' + styles.activeTheme : '')} id={'btn-diff'} onClick={() => {
+                <div className={styles.blocks + (selectedDiff === 1 ? ' ' + styles.activeTheme : '')} id={'btn-diff'} onClick={() => {
                     handleDifficultySelect('Easy');
                     handleClickDiff(1);
                 }}>
                     <p>Easy</p>
                 </div>
-                <div className={styles.blocks + (selectedDiff == 2 ? ' ' + styles.activeTheme : '')} id={'btn-diff'} onClick={() => {
+                <div className={styles.blocks + (selectedDiff === 2 ? ' ' + styles.activeTheme : '')} id={'btn-diff'} onClick={() => {
                     handleDifficultySelect('Medium');
                     handleClickDiff(2)
 
                 }}>
                     <p> Medium </p>
                 </div>
-                <div className={styles.blocks + (selectedDiff == 3 ? ' ' + styles.activeTheme : '')} id={'btn-diff'} onClick={() => {
+                <div className={styles.blocks + (selectedDiff === 3 ? ' ' + styles.activeTheme : '')} id={'btn-diff'} onClick={() => {
                     handleDifficultySelect('Hard');
                     handleClickDiff(3)
                 }}>
                     <p> Hard </p>
                 </div>
-                <div className={styles.blocks + (selectedDiff == 4 ? ' ' + styles.activeTheme : '')} id={'btn-diff'} onClick={() => {
+                <div className={styles.blocks + (selectedDiff === 4 ? ' ' + styles.activeTheme : '')} id={'btn-diff'} onClick={() => {
                     handleDifficultySelect('Pro');
                     handleClickDiff(4)
                 }}>

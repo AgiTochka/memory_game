@@ -1,7 +1,7 @@
 import {useStoreActions, useStoreState} from "easy-peasy";
 import {useEffect, useRef, useState} from "react";
 import Card from "./Card";
-import _, {forEach, random, sample, findIndex} from "underscore";
+import _ from "underscore";
 
 const Cards = (props) => {
     const choiceOne = useStoreState(state => state.choiceOne);
@@ -23,14 +23,19 @@ const Cards = (props) => {
     const setAddScore = useStoreActions(actions => actions.setAddScore);
     const [moveAI, setMoveAI] = useState(false);
     let diffParam = 0;
-    if (difficulty == 'Medium') {
-        diffParam = 3;
-    } else if (difficulty == 'Hard') {
-        diffParam = 4;
-    } else if (difficulty == 'Pro') {
-        diffParam = 5;
-    } else {
-        diffParam = 2;
+    switch (difficulty) {
+        case "Medium":
+            diffParam = 3;
+            break;
+        case "Hard":
+            diffParam = 4;
+            break;
+        case "Pro":
+            diffParam = 5;
+            break;
+        default:
+            diffParam = 2;
+            break;
     }
     let refIndexInMemory = useRef(0);
     let [flagTrueOpen, setFlagTrueOpen] = useState(Array(12).fill(false));
@@ -77,7 +82,7 @@ const Cards = (props) => {
 
     useEffect(() => {
         for (let i = 0; i < props.arrCards.length; i++) {
-            if (props.arrCards[i].id == refIndexOpen.curent) {
+            if (props.arrCards[i].id === refIndexOpen.curent) {
                 flagTrueOpen[i] = true;
                 setFlagTrueOpen([...flagTrueOpen]);
             }
@@ -122,7 +127,7 @@ const Cards = (props) => {
         let flag = true;
         if (memory.length !== 0) {
             for (let i = 0; i < memory.length; i++) {
-                if (memory[i] == index) {
+                if (memory[i] === index) {
                     flag = false;
                 }
             }
@@ -152,9 +157,9 @@ const Cards = (props) => {
     }
 
     const checkInMemory = (param, id) => {
-        if (param == 1 && id) {
+        if (param === 1 && id) {
             for (let i = 0; i < memory.length; i++) {
-                if (props.arrCards[memory[i]].id == props.arrCards[id].id && memory[i] != id) {
+                if (props.arrCards[memory[i]].id === props.arrCards[id].id && memory[i] !== id) {
                     setTimeout(() => {
                         setChoiceTwo(props.arrCards[memory[i]]);
                         props.arrCards[memory[i]].open = true;
@@ -168,17 +173,17 @@ const Cards = (props) => {
         let i = 0;
         while (i < memory.length) {
             for (let j = i + 1; j < memory.length; j++) {
-                if (props.arrCards[memory[i]].id == props.arrCards[memory[j]].id) {
+                if (props.arrCards[memory[i]].id === props.arrCards[memory[j]].id) {
                     setTimeout(() => {
-                        setChoiceTwo(props.arrCards[memory[i]]);
+                        setChoiceOne(props.arrCards[memory[i]]);
                         props.arrCards[memory[i]].open = true;
                         props.setarrState([...props.arrCards]);
-                        setTimeout(() => {
-                            setChoiceOne(props.arrCards[memory[j]]);
-                            props.arrCards[memory[j]].open = true;
-                            props.setarrState([...props.arrCards]);
-                        })
-                    }, 500)
+                    }, 500);
+                    setTimeout(() => {
+                        setChoiceTwo(props.arrCards[memory[j]]);
+                        props.arrCards[memory[j]].open = true;
+                        props.setarrState([...props.arrCards]);
+                    }, 1000);
                     return true;
                 }
             }
@@ -222,11 +227,6 @@ const Cards = (props) => {
     }
 
     return props.arrCards.map((item, index) => {
-        /*if (item.id == refIndexOpen.curent) {
-            flagTrueOpen[index] = true;
-            setFlagTrueOpen([...flagTrueOpen]);
-            console.log(flagTrueOpen);
-        }*/
         return <Card key={index} id={index} item={item} move={move} flagOpen={flagTrueOpen[index]}
                      handleChoice={handleChoice}></Card>
     })

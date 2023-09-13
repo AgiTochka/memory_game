@@ -6,7 +6,6 @@ const GameHeader = () => {
     const isMobile = useMedia("(max-width: 480px)")
     const isIPad = useMedia("(max-width: 820px)")
     const theme = useStoreState(state => state.theme);
-    const playerName = useStoreState(state => state.username);
     const score = useStoreState(state => state.score);
     const scorePC = useStoreState(state => state.scorePC);
     const setStep = useStoreActions(actions => actions.setStep);
@@ -17,7 +16,6 @@ const GameHeader = () => {
     const setMove = useStoreActions((actions) => actions.setMove);
     const setGameOver = useStoreActions(actions => actions.setGameOver);
 
-    //const category = "Architecture"
     const textCategory = "Well, "
     const player1 = {
         name: "You",
@@ -85,7 +83,6 @@ const GameHeader = () => {
                     <span style={{
                         textAlign: "right",
                         fontSize: isMobile ? 10 : 20,
-
                     }}>{player2.count}</span>
                 </div>
             </div>

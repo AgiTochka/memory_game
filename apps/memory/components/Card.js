@@ -1,15 +1,10 @@
 import {useState} from "react";
-import {random} from "underscore";
-import {useStoreActions, useStoreState} from "easy-peasy";
-import mq from "@/style/breakpoints";
+import random from "underscore";
 import styles from "../style/Common.module.css";
 import {useMedia} from "react-use";
-import {prefix} from "@/style/prefix";
 
 const Card = (props) => {
     const [rotation, setRotation] = useState(random(-2, 2));
-    const move = useStoreState(state => state.move);
-    const setMove = useStoreActions(actions => actions.setMove);
     const isMobile = useMedia("(max-width: 480px)")
     const isIPad = useMedia("(max-width: 820px)")
 
@@ -29,7 +24,7 @@ const Card = (props) => {
                  style={{
                      transform: `rotate(${rotation}deg)`,
                  }}
-                 onClick={(event) => {
+                 onClick={() => {
                      if (!props.item.open && props.move) {
                          handleClick(props.item, props.id);
                      } else {

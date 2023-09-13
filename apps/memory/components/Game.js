@@ -1,6 +1,6 @@
 import GameHeader from "./GameHeader"
-import {useEffect, useState} from "react";
-import {action, useStoreActions, useStoreState} from "easy-peasy";
+import {useState} from "react";
+import {useStoreState} from "easy-peasy";
 import Cards from "./Cards";
 import {useMedia} from "react-use";
 import _ from "underscore";
@@ -12,10 +12,7 @@ const Game = () => {
 
     const isMobile = useMedia("(max-width: 480px)")
     const isIPad = useMedia("(max-width: 820px)")
-
-    const [counter, setCounter] = useState(0);
-    let arr = [];
-
+    let arr;
     arr = JSON.parse(JSON.stringify(arrCards))
     for (let i = 0; i < arrCards.length; i++) {
         arr.push(arrCards[i]);
@@ -27,8 +24,6 @@ const Game = () => {
             width: "100%",
             height:"100%",
             cursor: `url("/memory_game/images/cursor.cur"), url("/memory_game/images/cursor1.cur"), pointer`,
-        }} onClick={() => {
-            setCounter(counter + 1)
         }}>
             {gameOver && <div style={{
                 position: "absolute",
@@ -66,7 +61,6 @@ const Game = () => {
             }}>
                 +50
             </div>}
-
             <div style={{
                 display: "flex",
                 flexWrap: "wrap",
@@ -75,11 +69,8 @@ const Game = () => {
                 justifyContent: "space-around"
             }}>
                 <Cards arrCards={arrState} setarrState={setarrState}/>
-
-
             </div>
         </div>
-
     )
 }
 

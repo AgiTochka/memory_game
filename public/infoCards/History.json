@@ -1,0 +1,44 @@
+[
+  {
+    "name": "World War I",
+    "description": "28 July 1914 – 11 November 1918",
+    "url": "/images/history/wwo.jpg",
+    "id": 1,
+    "open": false
+  },
+  {
+    "name": "World War Two",
+    "description": "1 September 1939 – 2 September 1945",
+    "url": "/images/history/wwt.jpg",
+    "id": 2,
+    "open": false
+  },
+  {
+    "name": "Spanish flu",
+    "description": "February 1918 – April 1920",
+    "url": "/images/history/flu.jpg",
+    "id": 3,
+    "open": false
+  },
+  {
+    "name": "Atomic Bombing",
+    "description": "6 and 9 August 1945",
+    "url": "/images/history/atomic.jpg",
+    "id": 4,
+    "open": false
+  },
+  {
+    "name": "9/11",
+    "description": "September 11, 2001",
+    "url": "/images/history/wwo.jpg",
+    "id": 5,
+    "open": false
+  },
+  {
+    "name": "The United Nations Establishment",
+    "description": "",
+    "url": "/images/history/wwo.jpg",
+    "id": 6,
+    "open": false
+  }
+]

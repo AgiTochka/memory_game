@@ -1,5 +1,5 @@
 import {useState} from "react";
-import random from "underscore";
+import {random} from "underscore";
 import styles from "../style/Common.module.css";
 import {useMedia} from "react-use";
 
